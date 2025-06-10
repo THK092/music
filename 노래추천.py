@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 
-# --- 감정별 > 장르별 음악 데이터 ---
+# --- 감정별 > 장르별 음악 데이터 (장르 1개씩 추가, 곡도 2곡씩 추가) ---
 music_data = {
     "기쁨": {
         "한국 발라드": [
@@ -11,6 +11,10 @@ music_data = {
         "해외 팝송": [
             ("Happy - Pharrell Williams", "https://www.youtube.com/watch?v=ZbZSe6N_BXs"),
             ("Can't Stop The Feeling! - Justin Timberlake", "https://www.youtube.com/watch?v=ru0K8uYEZWw"),
+        ],
+        "댄스": [
+            ("Uptown Funk - Bruno Mars", "https://www.youtube.com/watch?v=OPf0YbXqDm0"),
+            ("Good Time - Owl City & Carly Rae Jepsen", "https://www.youtube.com/watch?v=H7HmzwI67ec"),
         ],
     },
     "슬픔": {
@@ -22,6 +26,10 @@ music_data = {
             ("Someone Like You - Adele", "https://www.youtube.com/watch?v=hLQl3WQQoQ0"),
             ("Let Her Go - Passenger", "https://www.youtube.com/watch?v=RBumgq5yVrA"),
         ],
+        "재즈": [
+            ("What a Wonderful World - Louis Armstrong", "https://www.youtube.com/watch?v=CWzrABouyeE"),
+            ("My Funny Valentine - Chet Baker", "https://www.youtube.com/watch?v=UZJk2VbCMj0"),
+        ],
     },
     "화남": {
         "락": [
@@ -31,6 +39,10 @@ music_data = {
         "힙합": [
             ("Stronger - Kanye West", "https://www.youtube.com/watch?v=PsO6ZnUZI0g"),
             ("Break Stuff - Limp Bizkit", "https://www.youtube.com/watch?v=ZpUYjpKg9KY"),
+        ],
+        "펑크": [
+            ("American Idiot - Green Day", "https://www.youtube.com/watch?v=Ee_uujKuJMI"),
+            ("Holiday - Green Day", "https://www.youtube.com/watch?v=8VG7xj6vJTo"),
         ],
     },
     "평온": {
@@ -42,6 +54,10 @@ music_data = {
             ("Sunset Lover - Petit Biscuit", "https://www.youtube.com/watch?v=wJkKzZ8jU7s"),
             ("A Moment Apart - ODESZA", "https://www.youtube.com/watch?v=hv44srAsAo4"),
         ],
+        "포크": [
+            ("Skinny Love - Bon Iver", "https://www.youtube.com/watch?v=ssdgFoHLwnk"),
+            ("Bloom - The Paper Kites", "https://www.youtube.com/watch?v=4umIW3rZs1Y"),
+        ],
     },
     "불안": {
         "팝": [
@@ -52,6 +68,10 @@ music_data = {
             ("Je te laisserai des mots - Patrick Watson", "https://www.youtube.com/watch?v=CLiXUT3MS34"),
             ("Asleep - The Smiths", "https://www.youtube.com/watch?v=VjEq-r2agqc"),
         ],
+        "알앤비": [
+            ("Earned It - The Weeknd", "https://www.youtube.com/watch?v=WLnwsA7Ksas"),
+            ("Location - Khalid", "https://www.youtube.com/watch?v=by3yNv8i8gk"),
+        ],
     },
     "설렘": {
         "팝": [
@@ -61,6 +81,10 @@ music_data = {
         "록": [
             ("Lover - Taylor Swift", "https://www.youtube.com/watch?v=-BjZmE2gtdo"),
             ("Adore You - Harry Styles", "https://www.youtube.com/watch?v=VF-r5TtlT9w"),
+        ],
+        "인디 팝": [
+            ("Dog Days Are Over - Florence + The Machine", "https://www.youtube.com/watch?v=iWOyfLBYtuU"),
+            ("Pumped Up Kicks - Foster The People", "https://www.youtube.com/watch?v=SDTZ7iX4vTQ"),
         ],
     },
 }
