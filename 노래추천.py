@@ -1,53 +1,70 @@
 import streamlit as st
 import random
 
-# --- 감정별 음악 데이터 ---
+# --- 감정별 > 장르별 음악 데이터 ---
 music_data = {
-    "기쁨": [
-        ("Happy - Pharrell Williams", "https://www.youtube.com/watch?v=ZbZSe6N_BXs"),
-        ("Can't Stop The Feeling! - Justin Timberlake", "https://www.youtube.com/watch?v=ru0K8uYEZWw"),
-        ("Uptown Funk - Bruno Mars", "https://www.youtube.com/watch?v=OPf0YbXqDm0"),
-        ("Good Time - Owl City & Carly Rae Jepsen", "https://www.youtube.com/watch?v=H7HmzwI67ec"),
-        ("Best Day Of My Life - American Authors", "https://www.youtube.com/watch?v=Y66j_BUCBMY"),
-    ],
-    "슬픔": [
-        ("Someone Like You - Adele", "https://www.youtube.com/watch?v=hLQl3WQQoQ0"),
-        ("Let Her Go - Passenger", "https://www.youtube.com/watch?v=RBumgq5yVrA"),
-        ("Lost Stars - Adam Levine", "https://www.youtube.com/watch?v=cL4uhaQ58Rk"),
-        ("When I Was Your Man - Bruno Mars", "https://www.youtube.com/watch?v=ekzHIouo8Q4"),
-        ("Fix You - Coldplay", "https://www.youtube.com/watch?v=k4V3Mo61fJM"),
-    ],
-    "화남": [
-        ("In The End - Linkin Park", "https://www.youtube.com/watch?v=eVTXPUF4Oz4"),
-        ("Stronger - Kanye West", "https://www.youtube.com/watch?v=PsO6ZnUZI0g"),
-        ("Smells Like Teen Spirit - Nirvana", "https://www.youtube.com/watch?v=hTWKbfoikeg"),
-        ("Break Stuff - Limp Bizkit", "https://www.youtube.com/watch?v=ZpUYjpKg9KY"),
-        ("Numb - Linkin Park", "https://www.youtube.com/watch?v=kXYiU_JCYtU"),
-    ],
-    "평온": [
-        ("Weightless - Marconi Union", "https://www.youtube.com/watch?v=UfcAVejslrU"),
-        ("River Flows in You - Yiruma", "https://www.youtube.com/watch?v=7maJOI3QMu0"),
-        ("Sunset Lover - Petit Biscuit", "https://www.youtube.com/watch?v=wJkKzZ8jU7s"),
-        ("A Moment Apart - ODESZA", "https://www.youtube.com/watch?v=hv44srAsAo4"),
-        ("Kiss the Rain - Yiruma", "https://www.youtube.com/watch?v=so6ExplQlaY"),
-    ],
-    "불안": [
-        ("Lovely - Billie Eilish & Khalid", "https://www.youtube.com/watch?v=V1Pl8CzNzCw"),
-        ("Breathe Me - Sia", "https://www.youtube.com/watch?v=wbH3yCtU3tE"),
-        ("Je te laisserai des mots - Patrick Watson", "https://www.youtube.com/watch?v=CLiXUT3MS34"),
-        ("Asleep - The Smiths", "https://www.youtube.com/watch?v=VjEq-r2agqc"),
-        ("Cellophane - FKA twigs", "https://www.youtube.com/watch?v=YkLjqFpBh84"),
-    ],
-    "설렘": [
-        ("I Really Like You - Carly Rae Jepsen", "https://www.youtube.com/watch?v=qV5lzRHrGeg"),
-        ("Electric Love - BØRNS", "https://www.youtube.com/watch?v=RYr96YYEaZY"),
-        ("Lover - Taylor Swift", "https://www.youtube.com/watch?v=-BjZmE2gtdo"),
-        ("Adore You - Harry Styles", "https://www.youtube.com/watch?v=VF-r5TtlT9w"),
-        ("Perfect - Ed Sheeran", "https://www.youtube.com/watch?v=2Vv-BfVoq4g"),
-    ]
+    "기쁨": {
+        "한국 발라드": [
+            ("행복한 하루 - 아이유", "https://www.youtube.com/watch?v=ZbZSe6N_BXs"),
+            ("기분 좋은 날 - 백현", "https://www.youtube.com/watch?v=ru0K8uYEZWw"),
+        ],
+        "해외 팝송": [
+            ("Happy - Pharrell Williams", "https://www.youtube.com/watch?v=ZbZSe6N_BXs"),
+            ("Can't Stop The Feeling! - Justin Timberlake", "https://www.youtube.com/watch?v=ru0K8uYEZWw"),
+        ],
+    },
+    "슬픔": {
+        "한국 발라드": [
+            ("너를 만나 - 폴킴", "https://www.youtube.com/watch?v=hLQl3WQQoQ0"),
+            ("사랑했지만 - 김광석", "https://www.youtube.com/watch?v=RBumgq5yVrA"),
+        ],
+        "해외 팝송": [
+            ("Someone Like You - Adele", "https://www.youtube.com/watch?v=hLQl3WQQoQ0"),
+            ("Let Her Go - Passenger", "https://www.youtube.com/watch?v=RBumgq5yVrA"),
+        ],
+    },
+    "화남": {
+        "락": [
+            ("In The End - Linkin Park", "https://www.youtube.com/watch?v=eVTXPUF4Oz4"),
+            ("Smells Like Teen Spirit - Nirvana", "https://www.youtube.com/watch?v=hTWKbfoikeg"),
+        ],
+        "힙합": [
+            ("Stronger - Kanye West", "https://www.youtube.com/watch?v=PsO6ZnUZI0g"),
+            ("Break Stuff - Limp Bizkit", "https://www.youtube.com/watch?v=ZpUYjpKg9KY"),
+        ],
+    },
+    "평온": {
+        "클래식": [
+            ("Weightless - Marconi Union", "https://www.youtube.com/watch?v=UfcAVejslrU"),
+            ("River Flows in You - Yiruma", "https://www.youtube.com/watch?v=7maJOI3QMu0"),
+        ],
+        "일렉트로닉": [
+            ("Sunset Lover - Petit Biscuit", "https://www.youtube.com/watch?v=wJkKzZ8jU7s"),
+            ("A Moment Apart - ODESZA", "https://www.youtube.com/watch?v=hv44srAsAo4"),
+        ],
+    },
+    "불안": {
+        "팝": [
+            ("Lovely - Billie Eilish & Khalid", "https://www.youtube.com/watch?v=V1Pl8CzNzCw"),
+            ("Breathe Me - Sia", "https://www.youtube.com/watch?v=wbH3yCtU3tE"),
+        ],
+        "인디": [
+            ("Je te laisserai des mots - Patrick Watson", "https://www.youtube.com/watch?v=CLiXUT3MS34"),
+            ("Asleep - The Smiths", "https://www.youtube.com/watch?v=VjEq-r2agqc"),
+        ],
+    },
+    "설렘": {
+        "팝": [
+            ("I Really Like You - Carly Rae Jepsen", "https://www.youtube.com/watch?v=qV5lzRHrGeg"),
+            ("Electric Love - BØRNS", "https://www.youtube.com/watch?v=RYr96YYEaZY"),
+        ],
+        "록": [
+            ("Lover - Taylor Swift", "https://www.youtube.com/watch?v=-BjZmE2gtdo"),
+            ("Adore You - Harry Styles", "https://www.youtube.com/watch?v=VF-r5TtlT9w"),
+        ],
+    },
 }
 
-# --- 감정별 배경 색상 ---
 background_colors = {
     "기쁨": "#FFE082",
     "슬픔": "#90CAF9",
@@ -57,7 +74,6 @@ background_colors = {
     "설렘": "#F8BBD0",
 }
 
-# --- 감정별 명언 ---
 quotes = {
     "기쁨": "기쁨은 삶의 향기입니다. – 헬렌 켈러",
     "슬픔": "눈물은 마음의 언어입니다.",
@@ -67,17 +83,15 @@ quotes = {
     "설렘": "설렘은 새로운 시작의 신호입니다.",
 }
 
-# --- 세션 상태 초기화 ---
 if "recommended" not in st.session_state:
     st.session_state.recommended = []
 
-# --- 페이지 설정 ---
 st.set_page_config(page_title="감정 기반 음악 추천기", layout="wide")
 
-# --- 감정 선택 ---
+# 감정 선택
 emotion = st.selectbox("🎭 지금 기분은 어떤가요?", list(music_data.keys()))
 
-# --- 배경 색상 적용 ---
+# 배경색 적용
 st.markdown(f"""
     <style>
     .stApp {{
@@ -86,18 +100,24 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-# --- 감정별 명언 출력 ---
+# 감정별 명언 출력
 st.markdown(f"### 💬 {quotes[emotion]}")
 
-# --- 제목 ---
+# 장르 선택 (복수 선택 가능)
+genres = list(music_data[emotion].keys())
+selected_genres = st.multiselect("🎶 장르를 선택하세요 (최소 1개)", genres, default=genres)
+
 st.title("🎵 감정 기반 음악 추천기")
-st.markdown("당신의 감정에 어울리는 음악 5곡을 추천해드릴게요!")
+st.markdown("당신의 감정에 어울리는 음악을 추천해드릴게요! (각 장르별 2곡씩)")
 
-# --- 추천 버튼 ---
 if st.button("🎧 추천 음악 보기"):
-    st.session_state.recommended = random.sample(music_data[emotion], 5)
+    recommended_songs = []
+    for genre in selected_genres:
+        songs = music_data[emotion][genre]
+        count = min(2, len(songs))
+        recommended_songs.extend(random.sample(songs, count))
+    st.session_state.recommended = recommended_songs
 
-# --- 추천 곡 표시 ---
 if st.session_state.recommended:
     st.subheader(f"🎶 {emotion}한 기분에 어울리는 음악 추천:")
     for title, url in st.session_state.recommended:
