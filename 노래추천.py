@@ -9,14 +9,12 @@ music_data = {
         ("Uptown Funk - Bruno Mars", "https://www.youtube.com/watch?v=OPf0YbXqDm0"),
         ("Good Time - Owl City & Carly Rae Jepsen", "https://www.youtube.com/watch?v=H7HmzwI67ec"),
         ("Best Day Of My Life - American Authors", "https://www.youtube.com/watch?v=Y66j_BUCBMY"),
-        ("Walking on Sunshine - Katrina & The Waves", "https://www.youtube.com/watch?v=iPUmE-tne5U"),
     ],
     "슬픔": [
         ("Someone Like You - Adele", "https://www.youtube.com/watch?v=hLQl3WQQoQ0"),
         ("Let Her Go - Passenger", "https://www.youtube.com/watch?v=RBumgq5yVrA"),
         ("Lost Stars - Adam Levine", "https://www.youtube.com/watch?v=cL4uhaQ58Rk"),
         ("When I Was Your Man - Bruno Mars", "https://www.youtube.com/watch?v=ekzHIouo8Q4"),
-        ("All I Want - Kodaline", "https://www.youtube.com/watch?v=mtf7hC17IBM"),
         ("Fix You - Coldplay", "https://www.youtube.com/watch?v=k4V3Mo61fJM"),
     ],
     "화남": [
@@ -25,15 +23,27 @@ music_data = {
         ("Smells Like Teen Spirit - Nirvana", "https://www.youtube.com/watch?v=hTWKbfoikeg"),
         ("Break Stuff - Limp Bizkit", "https://www.youtube.com/watch?v=ZpUYjpKg9KY"),
         ("Numb - Linkin Park", "https://www.youtube.com/watch?v=kXYiU_JCYtU"),
-        ("Fight Song - Rachel Platten", "https://www.youtube.com/watch?v=xo1VInw-SKc"),
     ],
     "평온": [
         ("Weightless - Marconi Union", "https://www.youtube.com/watch?v=UfcAVejslrU"),
         ("River Flows in You - Yiruma", "https://www.youtube.com/watch?v=7maJOI3QMu0"),
         ("Sunset Lover - Petit Biscuit", "https://www.youtube.com/watch?v=wJkKzZ8jU7s"),
-        ("Bloom - ODESZA", "https://www.youtube.com/watch?v=5yk0w0sHb5g"),
         ("A Moment Apart - ODESZA", "https://www.youtube.com/watch?v=hv44srAsAo4"),
         ("Kiss the Rain - Yiruma", "https://www.youtube.com/watch?v=so6ExplQlaY"),
+    ],
+    "불안": [
+        ("Lovely - Billie Eilish & Khalid", "https://www.youtube.com/watch?v=V1Pl8CzNzCw"),
+        ("Breathe Me - Sia", "https://www.youtube.com/watch?v=wbH3yCtU3tE"),
+        ("Je te laisserai des mots - Patrick Watson", "https://www.youtube.com/watch?v=CLiXUT3MS34"),
+        ("Asleep - The Smiths", "https://www.youtube.com/watch?v=VjEq-r2agqc"),
+        ("Cellophane - FKA twigs", "https://www.youtube.com/watch?v=YkLjqFpBh84"),
+    ],
+    "설렘": [
+        ("I Really Like You - Carly Rae Jepsen", "https://www.youtube.com/watch?v=qV5lzRHrGeg"),
+        ("Electric Love - BØRNS", "https://www.youtube.com/watch?v=RYr96YYEaZY"),
+        ("Lover - Taylor Swift", "https://www.youtube.com/watch?v=-BjZmE2gtdo"),
+        ("Adore You - Harry Styles", "https://www.youtube.com/watch?v=VF-r5TtlT9w"),
+        ("Perfect - Ed Sheeran", "https://www.youtube.com/watch?v=2Vv-BfVoq4g"),
     ]
 }
 
@@ -43,6 +53,8 @@ background_colors = {
     "슬픔": "#90CAF9",
     "화남": "#EF9A9A",
     "평온": "#A5D6A7",
+    "불안": "#CE93D8",  # 연보라
+    "설렘": "#F8BBD0",  # 연핑크
 }
 
 # --- 세션 상태 초기화 ---
