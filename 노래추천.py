@@ -1,6 +1,7 @@
 import streamlit as st
 import random
 
+# 감정별 > 장르별 > 노래 제목과 유튜브 링크
 music_data = {
     "기쁨": {
         "한국 발라드": [
@@ -40,19 +41,41 @@ music_data = {
     },
 }
 
+background_colors = {
+    "기쁨": "#FFF9C4",
+    "슬픔": "#BBDEFB",
+    "화남": "#FFCDD2",
+    "평온": "#C8E6C9",
+    "불안": "#E1BEE7",
+    "설렘": "#F8BBD0",
+}
+
 st.set_page_config(page_title="감정 기반 음악 추천", layout="wide")
 
 if "recommended" not in st.session_state:
     st.session_state.recommended = []
 
 emotion = st.selectbox("😊 지금 기분은 어떤가요?", list(music_data.keys()))
+
+# 배경색 적용
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-color: {background_colors[emotion]};
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 genres = list(music_data[emotion].keys())
 selected_genres = st.multiselect("🎶 듣고 싶은 장르 선택", genres, default=genres)
 
 if st.button("🎧 추천 음악 보기"):
     rec = []
-    for g in selected_genres:
-        songs = music_data[emotion][g]
+    for genre in selected_genres:
+        songs = music_data[emotion][genre]
         rec.extend(random.sample(songs, min(2, len(songs))))
     st.session_state.recommended = rec
 
