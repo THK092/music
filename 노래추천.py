@@ -11,13 +11,13 @@ music_data = {
     "슬픔": {
         "한국 발라드": [
             ("김연우 – 여전히 아름다운지", "https://www.youtube.com/watch?v=rJkXU4YyQ5w"),
-            ("정승환 – 너였다면", "https://www.youtube.com/watch?v=K6g2ToX6lRg"),
+            ("나윤권 – 나였으면", "https://www.youtube.com/watch?v=InVFHb3nYdw"),
         ]
     },
     "화남": {
         "힙합": [
             ("ASH ISLAND – 악몽", "https://www.youtube.com/watch?v=9n61n0nLg2g"),
-            ("버즈 – 남자를 몰라", "https://www.youtube.com/watch?v=vY4ov2dchQY"),
+            ("정승환 – 너였다면", "https://www.youtube.com/watch?v=K6g2ToX6lRg"),
         ]
     },
     "평온": {
@@ -28,13 +28,12 @@ music_data = {
     },
     "불안": {
         "발라드": [
-            ("나윤권 – 나였으면", "https://www.youtube.com/watch?v=InVFHb3nYdw"),
+            ("볼빨간사춘기 – 나의 사춘기에게", "https://www.youtube.com/watch?v=U7RzTR5fV3s"),
             ("김연우 – 이 밤이 지나면", "https://www.youtube.com/watch?v=XBbK7r-FfHo"),
         ]
     },
     "설렘": {
-        "한국 발라드": [
-            ("볼빨간사춘기 – 나의 사춘기에게", "https://www.youtube.com/watch?v=U7RzTR5fV3s"),
+        "한국 발라드": [   
             ("마크툽 – Marry Me", "https://www.youtube.com/watch?v=NGn15v9oZ9c"),
         ]
     },
