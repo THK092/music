@@ -70,11 +70,17 @@ st.markdown(
 if st.button("🎧 추천 음악 보기"):
     rec = []
     for genre_songs in music_data[emotion].values():
-        rec.extend(random.sample(genre_songs, min(2, len(genre_songs))))
+        if len(genre_songs) >= 2:
+            rec.extend(random.sample(genre_songs, 2))
+        else:
+            rec.extend(genre_songs)
     st.session_state.recommended = rec
 
 if st.session_state.recommended:
     st.subheader("🎵 추천 곡 리스트:")
     for title, url in st.session_state.recommended:
         st.markdown(f"**{title}**")
-        st.video(url)
+        try:
+            st.video(url)
+        except Exception as e:
+            st.warning(f"동영상 불러오기 실패: {title}")
