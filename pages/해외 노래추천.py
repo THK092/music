@@ -3,39 +3,39 @@ import random
 
 music_data = {
     "기쁨": {
-        "한국 발라드": [
-            ("볼빨간사춘기 – 여행", "https://www.youtube.com/watch?v=xRbPAVnqtcs"),
-            ("우원재 – 시차", "https://www.youtube.com/watch?v=Rc7zXgJRGmY"),
+        "팝송": [
+            ("Pharrell Williams – Happy", "https://www.youtube.com/watch?v=ZbZSe6N_BXs"),
+            ("Katrina & The Waves – Walking on Sunshine", "https://www.youtube.com/watch?v=iPUmE-tne5U"),
         ]
     },
     "슬픔": {
-        "한국 발라드": [
-            ("김연우 – 여전히 아름다운지", "https://www.youtube.com/watch?v=rJkXU4YyQ5w"),
-            ("나윤권 – 나였으면", "https://www.youtube.com/watch?v=InVFHb3nYdw"),
+        "팝송": [
+            ("Lewis Capaldi – Someone You Loved", "https://www.youtube.com/watch?v=bCuhuePlP8o"),
+            ("Billie Eilish – Everything I Wanted", "https://www.youtube.com/watch?v=EgBJmlPo8Xw"),
         ]
     },
     "화남": {
-        "힙합": [
-            ("ASH ISLAND – 악몽", "https://www.youtube.com/watch?v=9n61n0nLg2g"),
-            ("정승환 – 너였다면", "https://www.youtube.com/watch?v=K6g2ToX6lRg"),
+        "팝송": [
+            ("Linkin Park – Numb", "https://www.youtube.com/watch?v=kXYiU_JCYtU"),
+            ("Eminem – Lose Yourself", "https://www.youtube.com/watch?v=_Yhyp-_hX2s"),
         ]
     },
     "평온": {
-        "인디": [
-            ("성시경 – 우린 제법 잘 어울려요", "https://www.youtube.com/watch?v=tOqFVzWPOZ4"),
-            ("잔나비 – 주저하는 연인들을 위해", "https://www.youtube.com/watch?v=NsRKoOIwZ5k"),
+        "팝송": [
+            ("Coldplay – Yellow", "https://www.youtube.com/watch?v=yKNxeF4KMsY"),
+            ("Ed Sheeran – Photograph", "https://www.youtube.com/watch?v=nSDgHBxUbVQ"),
         ]
     },
     "불안": {
-        "발라드": [
-            ("볼빨간사춘기 – 나의 사춘기에게", "https://www.youtube.com/watch?v=U7RzTR5fV3s"),
-            ("김연우 – 이 밤이 지나면", "https://www.youtube.com/watch?v=XBbK7r-FfHo"),
+        "팝송": [
+            ("Radiohead – Creep", "https://www.youtube.com/watch?v=XFkzRNyygfk"),
+            ("Sia – Breathe Me", "https://www.youtube.com/watch?v=wbP0cYw-Zrc"),
         ]
     },
     "설렘": {
-        "한국 발라드": [   
-            ("마크툽 – Marry Me", "https://www.youtube.com/watch?v=NGn15v9oZ9c"),
-            ("볼빨간사춘기 – 좋다고 말해", "https://www.youtube.com/watch?v=qYsPnpMxDFE"),
+        "팝송": [   
+            ("Taylor Swift – Enchanted", "https://www.youtube.com/watch?v=YW3tjqvy2cg"),
+            ("Shawn Mendes – Fallin’ All in You", "https://www.youtube.com/watch?v=8xg3vE8Ie_E"),
         ]
     },
 }
