@@ -53,7 +53,7 @@ st.set_page_config(page_title="감정 기반 음악 추천", layout="wide")
 
 if "recommended" not in st.session_state:
     st.session_state.recommended = []
-
+ 
 emotion = st.selectbox("😊 지금 기분은 어떤가요?", list(music_data.keys()))
 
 st.markdown(
