@@ -35,6 +35,7 @@ music_data = {
     "설렘": {
         "한국 발라드": [   
             ("마크툽 – Marry Me", "https://www.youtube.com/watch?v=NGn15v9oZ9c"),
+            ("볼빨간사춘기 – 좋다고 말해", "https://www.youtube.com/watch?v=qYsPnpMxDFE"),
         ]
     },
 }
